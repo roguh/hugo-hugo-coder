@@ -47,7 +47,6 @@ h5,
 h6 {
   font-family: $heading-font-family;
   font-weight: 700;
-  color: $alt-fg-color;
   margin: 6.4rem 0 3.2rem 0;
 }
 
@@ -223,15 +222,4 @@ img {
 .simple-icon svg {
   width: 2em;
   height: 2em;
-}
-
-.icon-link:hover {
-  * {
-    color: $link-color-icon;
-    transition: all 0.25s;
-  }
-  svg {
-    fill: $link-color-icon;
-    transition: all 0.25s;
-  }
 }

@@ -1,5 +1,6 @@
 .home {
-  background-color: lighten(blue, 48%);
+  background-color: $home-banner-bg-color;
+  color: $home-banner-color;
 }
 
 .content {
@@ -229,4 +230,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.icon-link:hover {
+  * {
+    color: $home-banner-highlight-color;
+    transition: all 0.25s;
+  }
+  svg {
+    fill: $home-banner-highlight-color;
+    transition: all 0.25s;
+  }
+}
+
+.icon-link {
+  * {
+    color: $home-banner-color;
+    transition: all 0.25s;
+  }
+  svg {
+    fill: $home-banner-color;
+    transition: all 0.25s;
+  }
 }
