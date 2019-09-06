@@ -22,4 +22,8 @@
 
   </body>
 
+  {{ if .Params.js }}
+  <script src="{{ .Params.js }}"></script>
+  {{ end }}
+
 </html>
