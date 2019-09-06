@@ -24,7 +24,6 @@ body {
 }
 
 a {
-  font-weight: 300;
   color: $link-color;
   text-decoration: none;
   &:focus,
@@ -188,9 +187,9 @@ img {
 
   ul li:before {
     /* --- */
-    content: '\2014';
+    content: '-';
     position: absolute;
-    margin-left: -3rem;
+    margin-left: -2rem;
   }
 }
 

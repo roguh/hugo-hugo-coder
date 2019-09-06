@@ -181,8 +181,11 @@
   }
 }
 
+.home {
+  min-height: 100vh;
+}
+
 .home-content {
-  min-height: 50vh;
   font-size: 2.5rem;
 
   ul {
@@ -201,6 +204,20 @@
         color: $link-color-active;
       }
     }
+  }
+}
+
+.main-menu {
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  ul li {
+    display: inline;
+    font-size: 1.7rem;
+    font-weight: bold;
   }
 }
 
