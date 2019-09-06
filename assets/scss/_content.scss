@@ -183,25 +183,24 @@
 
 .home {
   min-height: 100vh;
-}
+ .text-content {
+    font-size: 2.5rem;
 
-.home-content {
-  font-size: 2.5rem;
+    ul {
+      padding-left: 0;
+      text-align: right;
+    }
 
-  ul {
-    padding-left: 0;
-    text-align: right;
-  }
-
-  li {
-    list-style-type: none;
-    position: relative;
-    a {
-      display: inline-block;
-      width: 100%;
-      color: inherit;
-      &:hover {
-        color: $link-color-active;
+    li {
+      list-style-type: none;
+      position: relative;
+      a {
+        display: inline-block;
+        width: 100%;
+        color: inherit;
+        &:hover {
+          color: $link-color-active;
+        }
       }
     }
   }

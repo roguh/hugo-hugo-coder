@@ -2,7 +2,11 @@
   <article>
     {{ if (not .Params.HideTitle) }}
       <header>
-        <h1>{{ .Title }}</h1>
+        <h1>{{ .Title }}
+          {{ if .Params.draft }}
+          (DRAFT)
+          {{ end }}
+        </h1>
       </header>
     {{ end }}
 
