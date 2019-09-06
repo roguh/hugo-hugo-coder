@@ -1,11 +1,11 @@
 // Fonts
-$text-font-family: Merriweather, Georgia, serif;
-$heading-font-family: Lato, Helvetica, sans-serif;
+$text-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+$heading-font-family: Lato, $text-font-family;
 $code-font-family: 'Source Code Pro', 'Lucida Console', monospace;
 
-$home-banner-color: #00ff00;
-$home-banner-highlight-color: lighten($home-banner-color, 35%);
-$home-banner-bg-color: #001300;
+$home-banner-color: #a8ffd8;
+$home-banner-highlight-color: darken($home-banner-color, 35%);
+$home-banner-bg-color: #001000;
 $home-bg-color: darken($home-banner-bg-color, 20%);
 
 // Colors
@@ -13,6 +13,6 @@ $fg-color: #FAFAFA !default;
 $bg-color: $home-bg-color !default;
 $alt-fg-color: #E0E0E0 !default;
 $alt-bg-color: #000 !default;
-$link-color: #00ff00 !default;
+$link-color: #a8ffd8 !default;
 $link-color-active: lighten($link-color, 40%) !default;
 $link-color-icon: #f44336 !default;
