@@ -19,11 +19,15 @@
       [<a href="{{ .Site.Params.commit }}{{ getenv "GIT_COMMIT_SHA" }}">{{ getenv "GIT_COMMIT_SHA_SHORT" }}</a>]
     {{ end }}
 
-    {{- if .Site.Params.hiddenFooter }}
-    <p class='hide'>
+    <p class='stats'>
     Last change: {{ .Site.LastChange }}.
     Hugo version: {{ .Hugo.Version }}.
     </p>
+
+    {{- if .Site.Params.footerIcon }}
+    <div class='footer-icon-container'>
+      <a href='/'><img class='footer-icon' src='{{.Site.Params.footerIcon}}'></a>
+    </div>
     {{ end -}}
 
   </section>

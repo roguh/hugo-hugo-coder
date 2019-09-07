@@ -18,4 +18,15 @@
     font-style: italic;
     font-size: 90%;
   }
+  .stats {
+    font-size: 90%;
+    color: $bg-color;
+  }
+  .footer-icon-container {
+    padding: 10rem;
+    text-align: center;
+  }
+  .footer-icon {
+    max-height: 5rem;
+  }
 }
