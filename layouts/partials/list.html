@@ -12,7 +12,8 @@
     <li>
       <a class="title" href="{{ .Params.ExternalLink | default .RelPermalink }}">{{ .Title }}</a>
       <span class="date">{{ .Date.Format ( .Site.Params.dateFormat | default "January 2, 2006" ) }}</span>
-      <span class="words">{{ .FuzzyWordCount }} Words</span>
+        {{ with .Params.Categories }}{{ partial "taxonomy/categories.html" . }}{{ end }}
+        {{ with .Params.Tags }}{{ partial "taxonomy/tags.html" . }}{{ end }}
       <p>{{ .Summary }}</p>
     </li>
     {{ end }}

@@ -185,12 +185,13 @@ img {
     list-style-type: none;
   }
 
+  /*
   ul li:before {
-    /* --- */
     content: '-';
     position: absolute;
     margin-left: -2rem;
   }
+  */
 }
 
 
@@ -221,4 +222,8 @@ img {
 .simple-icon svg {
   width: 2em;
   height: 2em;
+}
+
+.tags, .categories {
+  font-size: 80%;
 }
