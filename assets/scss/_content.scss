@@ -205,16 +205,20 @@
 }
 
 .main-menu {
-  ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+  nav.menu {
+    margin-top: 75vh;
 
-  ul li {
-    display: inline;
-    font-size: 1.7rem;
-    font-weight: bold;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    ul li {
+      display: inline;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
   }
 }
 
