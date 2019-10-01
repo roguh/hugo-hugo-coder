@@ -11,7 +11,7 @@
 {{ if .Permalink }}
   <base href="{{ .Permalink }}">
 {{ end }}
-<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+<title>{{ block "title" . }}{{ partial "title" . }}{{ end }}</title>
 
 {{ if .Permalink }}
   <link rel="canonical" href="{{ .Permalink }}">
@@ -60,11 +60,19 @@
   {{ end }}
 {{ end }}
 
-{{ range .Site.Params.custom_css }}
+{{ range .Site.Params.customCSS }}
   <link rel="stylesheet" href="{{ . | relURL }}" />
 {{ end }}
 
-{{ range .Site.Params.custom_js }}
+{{ range .Site.Params.customJS }}
+  <script src="{{ . | relURL }}"></script>
+{{ end }}
+
+{{ range .Params.customCSS }}
+  <link rel="stylesheet" href="{{ . | relURL }}" />
+{{ end }}
+
+{{ range .Params.customJS }}
   <script src="{{ . | relURL }}"></script>
 {{ end }}
 
