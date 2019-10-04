@@ -13,6 +13,10 @@
       color: $link-color-active;
     }
   }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
   .container {
     color: lighten($fg-color, 50%);
     font-style: italic;
