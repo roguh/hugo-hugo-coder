@@ -7,8 +7,8 @@
       {{ end }}
       <div>
       <h1>{{ .Site.Params.author }}</h1>
-      {{ if .Site.Params.info }}
-        <h2>{{ .Site.Params.info | markdownify }}</h2>
+      {{ if .Site.Params.header }}
+        <h2>{{ .Site.Params.header | markdownify }}</h2>
       {{ end }}
       </div>
       {{ with .Site.Params.social }}
