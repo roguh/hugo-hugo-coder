@@ -26,7 +26,7 @@
 
     {{- if .Site.Params.footerIcon }}
     <div class='footer-icon-container'>
-      <a href='/'><img class='footer-icon' src='{{.Site.Params.footerIcon}}'></a>
+      <a href='/'><img title='{{ .Site.Params.footerIconDescription }}' alt='{{ .Site.Params.footerIconDescription }}' class='footer-icon' src='{{.Site.Params.footerIcon}}'></a>
     </div>
     {{ end -}}
 

@@ -163,15 +163,9 @@
           &:focus {
             color: $link-color;
           }
-          font-size: 1.4rem;
+          font-size: 1.75rem;
           i {
-            font-size: 2.8rem;
-          }
-          @media only screen and (max-width : 568px) {
-            font-size: 2.1rem;
-            i {
-              font-size: 4.2rem;
-            }
+            font-size: 3.5rem;
           }
         }
       }
