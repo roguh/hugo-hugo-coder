@@ -277,3 +277,11 @@
     transition: all 0.25s;
   }
 }
+
+.notSoHidden {
+  font-size: 90%;
+  color: $bg-color;
+  a, a:hover {
+    color: $bg-color !important;
+  }
+}
