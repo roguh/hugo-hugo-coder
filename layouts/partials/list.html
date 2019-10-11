@@ -1,4 +1,4 @@
-<section class="container list">
+<section class="container list {{ .Data.Singular }}">
   <h1 class="title">
     {{- if eq .Kind "taxonomy" -}}
       {{- i18n .Data.Singular | title -}}
