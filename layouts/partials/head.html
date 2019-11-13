@@ -41,7 +41,7 @@
 {{ end }}
 
 {{ range .Params.customJS }}
-  <script src="{{ . | relURL }}"></script>
+  <script async src="{{ . | relURL }}"></script>
 {{ end }}
 
 
