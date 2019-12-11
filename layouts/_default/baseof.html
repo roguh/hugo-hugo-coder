@@ -4,12 +4,12 @@
     {{- partial "head" . }}
   </head>
 
-  <body class="{{ if .Site.Params.rtl }}rtl{{ end }} {{ if .Site.Params.inverted }}inverted{{ end }}">
+  <body class="{{ if .Site.Params.rtl }}rtl{{ end }} {{ if .IsHome }}home{{ end }} {{ if .Site.Params.inverted }}inverted{{ end }}">
     <span id='top-of-page'></span>
     <main class="wrapper">
       {{ if not .IsHome }}
         {{ partial "header.html" . }}
-      {{ end }} 
+      {{ end }}
 
       <div class="{{ if .IsHome }}home{{ end }} content">
         {{ block "content" . }}{{ end }}

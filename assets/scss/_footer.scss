@@ -7,7 +7,7 @@
   hyphens: auto;
   text-align: justify;
   a {
-    color: lighten($link-color, 20%);
+    color: $home-banner-color;
     &:hover,
     &:active {
       color: $link-color-active;
@@ -30,6 +30,12 @@
     text-align: center;
   }
   .footer-icon {
-    max-height: 5rem;
+    max-height: 20rem;
+    border: 4rem solid black;
+    outline: 1px solid darken(#00e200, 0);
   }
+}
+
+.home .footer-icon {
+  outline: none;
 }
