@@ -289,3 +289,12 @@
     color: $bg-color !important;
   }
 }
+
+.home {
+  .notSoHidden {
+    color: $home-banner-bg-color;
+    a, a:hover {
+      color: $home-banner-bg-color !important;
+  }
+  }
+}
