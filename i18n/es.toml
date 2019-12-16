@@ -21,4 +21,7 @@ other = "Disculpa, aquí no hay nada."
 other = "Puedes regresar a la <a href=\"{{ . }}\">primera pagina</a>."
 
 [powered_by]
-other = "Promovido por"
+other = "Sitio propulsado por"
+
+[to_top_of_page]
+other = "Al inicio de la página"

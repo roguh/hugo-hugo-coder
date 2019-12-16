@@ -69,7 +69,8 @@
     display: none;
     @media only screen and (max-width : 768px) {
       &:checked + label {
-        color: $alt-bg-color;
+        color: red;
+        font-weight: bolder;
       }
       &:checked + label + ul {
         visibility: visible;

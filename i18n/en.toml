@@ -22,3 +22,6 @@ other = "You can head back to <a href=\"{{ . }}\">homepage</a>."
 
 [powered_by]
 other = "Powered by"
+
+[to_top_of_page]
+other = "To top of page"

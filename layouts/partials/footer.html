@@ -1,6 +1,6 @@
 <footer class="footer {{ if .IsHome }}home{{ end }}">
   <section class="container">
-    <p><a id="to-top" href='#top-of-page'>To top of page</a></p>
+    <p><a id="to-top" href='#top-of-page'>{{ i18n "to_top_of_page" }}</a></p>
 
     {{- if .Site.Menus.footer }}
     {{ partial "menu" (dict "menus" .Site.Menus "currentPage" . "menuName" "footer") }}
@@ -10,7 +10,7 @@
       <p>{{.}}</p>
     {{ end }}
     {{ if not .Site.Params.hideCredits }}
-      {{ i18n "powered_by" }} {{ .Site.Params.PoweredBy | markdownify }}
+      {{ i18n "powered_by" }}: {{ .Site.Params.PoweredBy | markdownify }}
       {{ if not .Site.Params.hideCopyright }} · {{ end }}
     {{ end }}
     {{ if not .Site.Params.hideCopyright }} {{ .Site.Params.Copyright | markdownify }}{{ end }}
@@ -27,9 +27,23 @@
     </p>
     {{ end }}
 
+    <nav class="menu">
+    <ul>
+    {{ if .Site.IsMultiLingual }}
+      {{ range .Site.Home.AllTranslations }}
+        {{ if ne $.Site.Language .Language }}
+          <li class="navigation-item">
+            <a href="{{ .Permalink }}">{{ .Language.LanguageName }} ({{ .Language }})</a>
+          </li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    </ul>
+    </nav>
+
     {{- if .Site.Params.footerIcon }}
     <div class='footer-icon-container'>
-      <a href='/'><img title='{{ .Site.Params.footerIconDescription }}' alt='{{ .Site.Params.footerIconDescription }}' class='footer-icon' src='{{.Site.Params.footerIcon}}'></a>
+      <a href='{{ .Site.BaseURL | relLangURL }}'><img title='{{ .Site.Params.footerIconDescription }}' alt='{{ .Site.Params.footerIconDescription }}' class='footer-icon' src='{{.Site.Params.footerIcon}}'></a>
     </div>
     {{ end -}}
 
