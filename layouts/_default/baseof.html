@@ -4,7 +4,7 @@
     {{- partial "head" . }}
   </head>
 
-  <body class="{{ if .Site.Params.rtl }}rtl{{ end }} {{ if .IsHome }}home{{ end }} {{ if .Site.Params.inverted }}inverted{{ end }}">
+  <body class="{{ if .Site.Params.rtl }}rtl{{ end }} {{ if .IsHome }}home{{ end }} {{ if .Site.Params.inverted }}inverted{{ end }} lang-{{ .Site.Language }}">
     <span id='top-of-page'></span>
     <main class="wrapper">
       {{ if not .IsHome }}
