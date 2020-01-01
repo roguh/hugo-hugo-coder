@@ -7,6 +7,10 @@
 html {
 	box-sizing: border-box;
 	font-size: 62.5%;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
   hyphens: auto;
 }
 

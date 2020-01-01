@@ -1,10 +1,19 @@
-.home.lang-es {
-  text-align: justify;
-}
-
 .home {
   background-color: $home-banner-bg-color;
   color: $home-banner-color;
+
+  &.lang-es {
+    .text-content {
+      text-align: justify;
+    }
+  }
+
+  &.lang-es, &.lang-en {
+    .intro h2 {
+      font-size: 3.2rem;
+    }
+  }
+
 }
 
 .content {
@@ -146,7 +155,7 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-style: italic;
-        font-size: 3.2rem;
+        font-size: 2.2rem;
       }
     }
     ul {
