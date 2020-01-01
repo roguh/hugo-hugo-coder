@@ -1,1 +1,3 @@
-{{ partial "simple-icon.html" . }}
+<span class="simple-icon {{ . }}" aria-hidden="true" aria-label="{{ . }} icon">
+  {{ partial "inline-svg" (print "simple-icons/icons/" . ".svg") }}
+</span>
