@@ -40,6 +40,9 @@
       &:hover {
         border-bottom-color: black;
       }
+      &:last-child {
+        margin: 0;
+      }
     }
     .menu-separator {
       @media only screen and (max-width : 768px) {
