@@ -14,6 +14,13 @@
     }
   }
 
+  &.lang-en {
+    .intro {
+      h1 {
+        font-size: 5.5em;
+      }
+    }
+  }
 }
 
 .content {
@@ -144,9 +151,9 @@
         margin-bottom: 1rem;
         font-variant: all-small-caps;
         line-height: 1em;
-        font-size: 4.5em;
+        font-size: 3.8em;
         @media only screen and (max-width : 768px) {
-          font-size: 3.5em;
+          font-size: 3.4em;
         }
         display: inline-block;
       }
