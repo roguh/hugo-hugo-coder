@@ -27,9 +27,9 @@
     </p>
     {{ end }}
 
+    {{ if .Site.IsMultiLingual }}
     <nav class="menu">
       <ul class="all-translations">
-      {{ if .Site.IsMultiLingual }}
         {{ range .Site.Home.AllTranslations }}
           {{ if ne $.Site.Language .Language }}
             <li class="all-translations navigation-item">
@@ -37,9 +37,10 @@
             </li>
           {{ end }}
         {{ end }}
-      {{ end }}
       </ul>
+      Available in {{ len .Site.Home.AllTranslations }} languages.
     </nav>
+    {{ end }}
 
     {{- if .Site.Params.footerIcon }}
     <div class='footer-icon-container'>
