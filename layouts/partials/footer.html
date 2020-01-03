@@ -28,17 +28,17 @@
     {{ end }}
 
     <nav class="menu">
-    <ul>
-    {{ if .Site.IsMultiLingual }}
-      {{ range .Site.Home.AllTranslations }}
-        {{ if ne $.Site.Language .Language }}
-          <li class="navigation-item">
-            <a href="{{ .Permalink }}">{{ .Language.LanguageName }} ({{ .Language }})</a>
-          </li>
+      <ul class="all-translations">
+      {{ if .Site.IsMultiLingual }}
+        {{ range .Site.Home.AllTranslations }}
+          {{ if ne $.Site.Language .Language }}
+            <li class="all-translations navigation-item">
+              <a href="{{ .Permalink }}">{{ .Language.LanguageName }} ({{ .Language }})</a>
+            </li>
+          {{ end }}
         {{ end }}
       {{ end }}
-    {{ end }}
-    </ul>
+      </ul>
     </nav>
 
     {{- if .Site.Params.footerIcon }}

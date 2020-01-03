@@ -235,3 +235,18 @@ img {
 .tags, .categories {
   font-size: 80%;
 }
+
+ul.all-translations {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    display: inline-block;
+    border-bottom: 4px $link-color solid;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
