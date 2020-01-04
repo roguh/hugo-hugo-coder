@@ -28,7 +28,13 @@
 <section class="container">
   <article class="text-content">
   {{ with .Content }}
-  {{ . }}
+    {{ . }}
+  {{ end }}
+
+  {{ if .Params.iframe }}
+    {{ range .Params.iframe }}
+      <iframe width='100%' style='min-height:100vh' src='{{ . }}'></iframe>
+    {{ end }}
   {{ end }}
   </article>
 </section>
