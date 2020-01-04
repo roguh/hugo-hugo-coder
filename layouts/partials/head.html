@@ -40,11 +40,6 @@
   <link rel="stylesheet" href="{{ . | relURL }}" />
 {{ end }}
 
-{{ range .Params.customJS }}
-  <script async src="{{ . | relURL }}"></script>
-{{ end }}
-
-
 <link rel="shortcut icon" href="{{ "/images/favicon.ico" | absURL }}" />
 <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}" sizes="32x32">
 <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}" sizes="32x32">

@@ -22,6 +22,10 @@
 
   </body>
 
+  {{ range .Params.customJS }}
+    <script src="{{ . | relURL }}"></script>
+  {{ end }}
+
   {{ if .Params.js }}
   <script src="{{ .Params.js }}"></script>
   {{ end }}
