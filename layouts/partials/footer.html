@@ -28,6 +28,13 @@
     {{ end }}
 
     {{ if .Site.IsMultiLingual }}
+
+      {{- if .Site.Params.footerIcon }}
+      <div class='footer-icon-container'>
+        <a href='{{ .Site.BaseURL | relLangURL }}'><img title='{{ .Site.Params.footerIconDescription }}' alt='{{ .Site.Params.footerIconDescription }}' class='footer-icon' src='{{.Site.Params.footerIcon}}'></a>
+      </div>
+      {{ end -}}
+
     <nav class="menu">
       <ul class="all-translations">
         {{ range .Site.Home.AllTranslations }}
