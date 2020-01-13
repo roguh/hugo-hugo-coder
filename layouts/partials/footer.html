@@ -40,7 +40,7 @@
         {{ range .Site.Home.AllTranslations }}
           {{ if ne $.Site.Language .Language }}
             <li class="all-translations navigation-item">
-              <a href="{{ .Permalink }}">{{ .Language.LanguageName }} <b>/{{ .Language }}</b></a>
+              <a href="{{ .Permalink }}">{{ .Language.LanguageName | safeHTML }} <b>/{{ .Language }}</b></a>
             </li>
           {{ end }}
         {{ end }}
@@ -56,6 +56,7 @@
     {{ end -}}
 
   </section>
+  deez nutz
 </footer>
 <script>
   var elem = document.getElementById("to-top");

@@ -18,6 +18,11 @@
     padding: 0;
     li {
       padding: 0.45em 0;
+      a {
+        span {
+          padding: 0 1.3em;
+        }
+      }
     }
   }
   .container {
