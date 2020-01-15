@@ -1,6 +1,6 @@
 <footer class="footer {{ if .IsHome }}home{{ end }}">
   <section class="container">
-    <p><a id="to-top" href='#top-of-page'>{{ i18n "to_top_of_page" }}</a></p>
+    <p><a id="to-top" href='#top-of-page'>{{ i18n "to_top_of_page" }} ↑</a></p>
 
     {{- if .Site.Menus.footer }}
     {{ partial "menu" (dict "menus" .Site.Menus "currentPage" . "menuName" "footer") }}
