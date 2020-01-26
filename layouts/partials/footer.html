@@ -20,7 +20,7 @@
     {{ end }}
 
     {{ if .Site.Params.showHiddenFooter }}
-    <p class='notSoHidden'>
+    <p>
     Last change: {{ .Site.LastChange }}.
     Hugo version: {{ .Hugo.Version }}.
     {{ .Site.Params.hiddenfooterextracontent | markdownify }}
