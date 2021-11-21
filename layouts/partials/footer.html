@@ -21,7 +21,6 @@
 
     {{ if .Site.Params.showHiddenFooter }}
     <p>
-    Last change: {{ .Site.LastChange }}.
     Hugo version: {{ .Hugo.Version }}.
     {{ .Site.Params.hiddenfooterextracontent | markdownify }}
     </p>
