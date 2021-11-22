@@ -7,11 +7,9 @@
 
     {{- .Title -}}
   </h1>
-  <section class="container">
-    <article class="text-content">
-    {{ .Content }}
-    </article>
-  </section>
+  <article class="text-content">
+  {{ .Content }}
+  </article>
   <ul>
     {{ range .Paginator.Pages }}
     <li>
