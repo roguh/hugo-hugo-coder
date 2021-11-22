@@ -2,6 +2,14 @@
 <html lang="{{ .Site.Language.Lang }}">
   <head>
     {{- partial "head" . }}
+
+    {{ range .Params.customJS }}
+      <script src="{{ . | relURL }}"></script>
+    {{ end }}
+  
+    {{ if .Params.js }}
+    <script src="{{ .Params.js }}"></script>
+    {{ end }}
   </head>
 
   <body class="{{ if .Site.Params.rtl }}rtl{{ end }} {{ if .IsHome }}home{{ end }} {{ if .Site.Params.inverted }}inverted{{ end }} lang-{{ .Site.Language }}">
@@ -22,12 +30,11 @@
 
   </body>
 
-  {{ range .Params.customJS }}
+  {{ range .Params.customJSAfter }}
     <script src="{{ . | relURL }}"></script>
   {{ end }}
-
-  {{ if .Params.js }}
-  <script src="{{ .Params.js }}"></script>
+  
+  {{ if .Params.jsAfter }}
+  <script src="{{ .Params.jsAfter }}"></script>
   {{ end }}
-
 </html>
