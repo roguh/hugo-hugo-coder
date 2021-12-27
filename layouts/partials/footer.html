@@ -6,25 +6,21 @@
     {{ partial "menu" (dict "menus" .Site.Menus "currentPage" . "menuName" "footer") }}
     {{ end -}}
 
-    {{ with .Site.Params.footercontent | safeHTML }}
-      <p>{{.}}</p>
-    {{ end }}
+    <p>
+    {{.Site.Params.footercontent | safeHTML}}
+    </p>
+    
+    <p>
+    {{ if not .Site.Params.hideCopyright }} {{ .Site.Params.Copyright | markdownify }}{{ end }}
     {{ if not .Site.Params.hideCredits }}
       {{ i18n "powered_by" }}: {{ .Site.Params.PoweredBy | markdownify }}
       {{ if not .Site.Params.hideCopyright }} · {{ end }}
+      {{ if .Site.Params.showVersion }}
+      Hugo version: {{ .Hugo.Version }}.
+        {{ .Site.Params.hiddenfooterextracontent | markdownify }}
+      {{ end }}
     {{ end }}
-    {{ if not .Site.Params.hideCopyright }} {{ .Site.Params.Copyright | markdownify }}{{ end }}
-    {{ if .Site.Params.commit }}
-      {{ if or (not .Site.Params.hideCredits) (not .Site.Params.hideCopyright) }} · {{ end }}
-      [<a href="{{ .Site.Params.commit }}{{ getenv "GIT_COMMIT_SHA" }}">{{ getenv "GIT_COMMIT_SHA_SHORT" }}</a>]
-    {{ end }}
-
-    {{ if .Site.Params.showHiddenFooter }}
-    <p>
-    Hugo version: {{ .Hugo.Version }}.
-    {{ .Site.Params.hiddenfooterextracontent | markdownify }}
     </p>
-    {{ end }}
 
     {{ if .Site.IsMultiLingual }}
     <nav class="menu">
@@ -37,8 +33,6 @@
           {{ end }}
         {{ end }}
       </ul>
-      <p>{{ len .Site.Home.AllTranslations }} translations.</p>
-
     </nav>
     {{ end }}
 
