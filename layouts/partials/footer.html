@@ -16,7 +16,7 @@
       {{ i18n "powered_by" }}: {{ .Site.Params.PoweredBy | markdownify }}
       {{ if not .Site.Params.hideCopyright }} · {{ end }}
       {{ if .Site.Params.showVersion }}
-      Hugo version: {{ hugo.Version }} ({{- hugo.Environment }}, {{ if hugo.IsExtended -}} extended {{- end }} released {{ hugo.BuildDate }}) {{ if not hugo.IsProduction }} NOT PRODUCTION {{- end -}}.
+      Hugo version: {{ hugo.Version }} ({{- hugo.Environment }}, {{ if hugo.IsExtended -}} extended {{- end }}, released {{ hugo.BuildDate }}) {{ if not hugo.IsProduction }} NOT PRODUCTION {{- end -}}.
         {{ .Site.Params.hiddenfooterextracontent | markdownify }}
       {{ end }}
     {{ end }}
