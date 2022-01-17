@@ -16,25 +16,13 @@
       {{ i18n "powered_by" }}: {{ .Site.Params.PoweredBy | markdownify }}
       {{ if not .Site.Params.hideCopyright }} · {{ end }}
       {{ if .Site.Params.showVersion }}
-      Hugo version: {{ .Hugo.Version }}.
+      Hugo version: {{ hugo.Version }} ({{- hugo.Environment }}, {{ if hugo.IsExtended -}} extended {{- end }} released {{ hugo.BuildDate }}) {{ if not hugo.IsProduction }} NOT PRODUCTION {{- end -}}.
         {{ .Site.Params.hiddenfooterextracontent | markdownify }}
       {{ end }}
     {{ end }}
     </p>
 
-    {{ if .Site.IsMultiLingual }}
-    <nav class="menu">
-      <ul class="all-translations">
-        {{ range .Site.Home.AllTranslations }}
-          {{ if ne $.Site.Language .Language }}
-            <li class="all-translations navigation-item">
-              <a href="{{ .Permalink }}">{{ .Language.LanguageName | safeHTML }} <b>/{{ .Language }}</b></a>
-            </li>
-          {{ end }}
-        {{ end }}
-      </ul>
-    </nav>
-    {{ end }}
+    {{ partial "languagemenu" . }}
 
     {{- if .Site.Params.footerIcon }}
     <div class='footer-icon-container'>

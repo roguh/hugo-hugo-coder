@@ -25,3 +25,9 @@ other = "Sitio propulsado por"
 
 [to_top_of_page]
 other = "Al inicio de la página"
+
+[translations-include]
+other = "Traducciones incluyen:"
+
+[also-read-in]
+other = "También lee en:"

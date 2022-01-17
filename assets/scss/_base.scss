@@ -236,7 +236,7 @@ img {
   font-size: 80%;
 }
 
-ul.all-translations {
+ul.translations {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -248,5 +248,8 @@ ul.all-translations {
     &:hover {
       border-bottom: none;
     }
+  }
+  li.not-a-link {
+    border-bottom: 0px;
   }
 }

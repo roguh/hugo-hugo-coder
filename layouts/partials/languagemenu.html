@@ -1,0 +1,15 @@
+{{ if .Site.IsMultiLingual }}
+<nav class="menu">
+  <ul class="translations">
+    <li class="not-a-link">{{ i18n "translations-include" }}</li>
+    {{ range .Site.Home.AllTranslations }}
+      {{ if ne $.Site.Language .Language }}
+        <li class="translations navigation-item">
+          <a href="{{ .Permalink }}">{{ .Language.LanguageName | safeHTML }} <b>/{{ .Language }}</b></a>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>
+{{ end }}
+

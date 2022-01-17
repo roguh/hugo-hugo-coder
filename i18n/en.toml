@@ -25,3 +25,9 @@ other = "Powered by"
 
 [to_top_of_page]
 other = "To top of page"
+
+[translations-include]
+other = "Translations include:"
+
+[also-read-in]
+other = "Also read in:"

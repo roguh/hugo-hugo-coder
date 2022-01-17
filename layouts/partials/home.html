@@ -1,3 +1,13 @@
+<ul class="translations">
+    <li class="not-a-link">{{ i18n "also-read-in" }}</li>
+    {{ range .Site.Home.AllTranslations }}
+      {{ if and .Language.Params.IsHighPriority (ne $.Site.Language .Language) }}
+        <li class="translations navigation-item">
+          <a href="{{ .Permalink }}">{{ .Language.LanguageName | safeHTML }} <b>/{{ .Language }}</b></a>
+        </li>
+      {{ end }}
+    {{ end }}
+</ul>
 <section class="home">
 <section class="about-container">
   <article class="about container">
