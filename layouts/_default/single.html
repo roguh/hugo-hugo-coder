@@ -25,7 +25,7 @@
               </time>
             </span>
             {{ end }}
-            {{ if not .Params.hideMeta }}
+            {{ if and (not .Params.hideMeta) (not .Params.hideReadingTime) }}
             <span class="reading-time">
               <i class="fas fa-clock"></i>
               {{ i18n "reading_time" .ReadingTime }}
@@ -39,6 +39,14 @@
         </div>
         {{ end }}
       </header>
+
+      {{ if .Page.Params.toc }}
+        <aside>
+          <p id="toc"><i>Table of contents</i></p>
+
+          {{ .TableOfContents }}
+        </aside>
+      {{ end }}
 
       <div>
         {{ .Content }}
