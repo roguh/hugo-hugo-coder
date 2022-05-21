@@ -38,9 +38,9 @@
     }
     .navigation-item {
       margin: 0 0.75rem;
-      border-bottom: 4px white solid;
+      border-bottom: 4px $link-color solid;
       &:hover {
-        border-bottom-color: black;
+        border-bottom-color: $link-color-active;
       }
     }
     .menu-separator {

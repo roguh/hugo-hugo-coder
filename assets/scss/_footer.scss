@@ -7,7 +7,6 @@
   hyphens: auto;
   text-align: justify;
   a {
-    color: $home-banner-color;
     &:hover,
     &:active {
       color: $link-color-active;
@@ -21,7 +20,6 @@
     }
   }
   .container {
-    color: lighten($fg-color, 50%);
     font-style: italic;
     font-size: 90%;
   }
@@ -31,6 +29,6 @@
   }
   .footer-icon {
     max-height: 20rem;
-    border: 30px solid black;
+    border: 30px solid $bg-color;
   }
 }
