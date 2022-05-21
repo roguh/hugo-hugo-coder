@@ -48,10 +48,4 @@
   {{ end }}
   </article>
 </section>
-
-<section class="main-menu">
-  {{- if .Site.Menus.footer }}
-  {{ partial "menu" (dict "menus" .Site.Menus "currentPage" . "menuName" "main") }}
-  {{ end -}}
-</section>
 </section>
