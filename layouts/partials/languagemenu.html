@@ -1,3 +1,4 @@
+{{ if hugo.IsMultilingual }}
 <nav class="menu">
   <ul class="translations">
     <li class="not-a-link">{{ i18n "translations-include" }}</li>
@@ -10,3 +11,5 @@
     {{ end }}
   </ul>
 </nav>
+{{ end }}
+
